@@ -30,9 +30,20 @@ import csharpLogo from "./assets/tech_logo/csharp.png";
 import eisystemsLogo from "./assets/company_logo/eisystemsLogo.png"
 
 // Education Section Logo's
-import sritLogo from "./assets/education_logo/sritLogo.png";
+import sritLogo from './assets/education_logo/sritLogo.png';
 import gowthamLogo from "./assets/education_logo/gowthamLogo.jpeg";
 import srujanLogo from "./assets/education_logo/srujanLogo.png";
+//using a sritLogo.png as image for the  remaining image objects
+import fitnessMicroservicesLogo from "./assets/work_logo/sritLogo.png";
+import weatherAppLogo from "./assets/work_logo/sritLogo.png";
+import todoAppLogo from "./assets/work_logo/sritLogo.png";
+import customerSegLogo from "./assets/work_logo/sritLogo.png";
+import pollboxLogo from "./assets/work_logo/sritLogo.png";
+import votingAppLogo from "./assets/work_logo/sritLogo.png";
+import quizInterfaceLogo from "./assets/work_logo/sritLogo.png";
+import textUtilsLogo from "./assets/work_logo/sritLogo.png";
+
+
 
 // Project Section Logo's
 import chatAppLogo from "./assets/work_logo/chatAppLogo.png";
