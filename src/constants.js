@@ -36,26 +36,17 @@ import srujanLogo from "./assets/education_logo/srujanLogo.png";
 //using a sritLogo.png as image for the  remaining image objects
 import fitnessMicroservicesLogo from "./assets/work_logo/sritLogo.png";
 import weatherAppLogo from "./assets/work_logo/sritLogo.png";
-import todoAppLogo from "./assets/work_logo/sritLogo.png";
-import customerSegLogo from "./assets/work_logo/sritLogo.png";
+import todoAppLogo from "./assets/work_logo/todoAppLogo.png";
+import customerSegLogo from "./assets/work_logo/customerSegLogo.png";
 import pollboxLogo from "./assets/work_logo/sritLogo.png";
 import votingAppLogo from "./assets/work_logo/sritLogo.png";
 import quizInterfaceLogo from "./assets/work_logo/sritLogo.png";
-import textUtilsLogo from "./assets/work_logo/sritLogo.png";
+import textUtilsLogo from "./assets/work_logo/textUtilsImg.png";
+import chatAppLogo from "./assets/work_logo/chatAppLogo.png";
 
 
 
 // Project Section Logo's
-import chatAppLogo from "./assets/work_logo/chatAppLogo.png";
-import githubdetLogo from "./assets/work_logo/github_det.png";
-import csprepLogo from "./assets/work_logo/cs_prep.png";
-import movierecLogo from "./assets/work_logo/movie_rec.png";
-import taskremLogo from "./assets/work_logo/task_rem.png";
-import npmLogo from "./assets/work_logo/npm.png";
-import webverLogo from "./assets/work_logo/web_dig.png";
-import cmLogo from "./assets/work_logo/cm.png";
-import imagesearchLogo from "./assets/work_logo/image_search.png";
-import removebgLogo from "./assets/work_logo/remove_bg.png";
 
 export const myName = "Saddam Syed";
 

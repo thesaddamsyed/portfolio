@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { projects } from "../../constants";
 
 const Work = () => {
@@ -11,6 +11,21 @@ const Work = () => {
   const handleCloseModal = () => {
     setSelectedProject(null);
   };
+
+    useEffect(() => {
+        if (selectedProject) {
+            // Disable background scrolling
+            document.body.style.overflow = "hidden";
+        } else {
+            // Re-enable scrolling when modal closes
+            document.body.style.overflow = "auto";
+        }
+
+        // Cleanup (important for route changes or unmount)
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [selectedProject]);
 
   return (
     <section
@@ -64,67 +79,75 @@ const Work = () => {
         ))}
       </div>
 
-      {/* Modal Container */}
-      {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-hidden relative">
-            <div className="flex justify-end p-4">
-              <button
-                onClick={handleCloseModal}
-                className="text-white text-3xl font-bold hover:text-purple-500"
-              >
-                &times;
-              </button>
-            </div>
+        {selectedProject && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
+                <div
+                    className="bg-gray-900 rounded-2xl shadow-2xl
+                 w-[90%] md:w-[80%] lg:w-[70%] max-w-4xl
+                 max-h-[90vh] relative overflow-y-auto
+                 transition-all duration-300 ease-in-out"
+                >
+                    {/* Close Button */}
+                    <div className="flex justify-end p-4">
+                        <button
+                            onClick={handleCloseModal}
+                            className="text-white text-3xl font-bold hover:text-purple-500"
+                        >
+                            &times;
+                        </button>
+                    </div>
 
-            <div className="flex flex-col">
-              <div className="w-full flex justify-center bg-gray-900 px-4">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="lg:w-full w-[95%] object-contain rounded-xl shadow-2xl"
-                />
-              </div>
-              <div className="lg:p-8 p-6">
-                <h3 className="lg:text-3xl font-bold text-white mb-4 text-md">
-                  {selectedProject.title}
-                </h3>
-                <p className="text-gray-400 mb-6 lg:text-base text-xs">
-                  {selectedProject.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {selectedProject.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                    {/* Content */}
+                    <div className="flex flex-col items-center px-5 pb-6 text-center">
+                        <img
+                            src={selectedProject.image}
+                            alt={selectedProject.title}
+                            className="w-[90%] max-h-[45vh] object-contain rounded-xl shadow-xl mb-6"
+                        />
+
+                        <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
+                            {selectedProject.title}
+                        </h3>
+                        <p className="text-gray-400 mb-5 text-sm lg:text-base">
+                            {selectedProject.description}
+                        </p>
+
+                        <div className="flex flex-wrap justify-center gap-2 mb-6">
+                            {selectedProject.tags.map((tag, index) => (
+                                <span
+                                    key={index}
+                                    className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-3 py-1"
+                                >
+              {tag}
+            </span>
+                            ))}
+                        </div>
+
+                        <div className="flex justify-center gap-4">
+                            <a
+                                href={selectedProject.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-gray-800 hover:bg-purple-800 text-gray-400 px-5 py-2 rounded-xl text-sm lg:text-lg font-semibold"
+                            >
+                                View Code
+                            </a>
+                            <a
+                                href={selectedProject.webapp}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-purple-600 hover:bg-purple-800 text-white px-5 py-2 rounded-xl text-sm lg:text-lg font-semibold"
+                            >
+                                View Live
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex gap-4">
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-1/2 bg-gray-800 hover:bg-purple-800 text-gray-400 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
-                  >
-                    View Code
-                  </a>
-                  <a
-                    href={selectedProject.webapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-1/2 bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
-                  >
-                    View Live
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      )}
+        )}
+
+
+
     </section>
   );
 };
