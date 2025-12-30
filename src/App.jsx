@@ -22,6 +22,7 @@ function App() {
         <Navbar />
         <About />
         <Skills />
+        
         <Experience />
         <Projects />
         <Education />
