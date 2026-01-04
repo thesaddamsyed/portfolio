@@ -22,7 +22,6 @@ import vscodeLogo from "./assets/tech_logo/vscode.png";
 import postmanLogo from "./assets/tech_logo/postman.png";
 import mcLogo from "./assets/tech_logo/mc.png";
 import netlifyLogo from "./assets/tech_logo/netlify.png";
-import vercelLogo from "./assets/tech_logo/vercel.png";
 import postgreLogo from "./assets/tech_logo/postgre.png";
 import csharpLogo from "./assets/tech_logo/csharp.png";
 
@@ -34,12 +33,11 @@ import sritLogo from './assets/education_logo/sritLogo.png';
 import gowthamLogo from "./assets/education_logo/gowthamLogo.jpeg";
 import srujanLogo from "./assets/education_logo/srujanLogo.png";
 //using a sritLogo.png as image for the  remaining image objects
-import fitnessMicroservicesLogo from "./assets/work_logo/sritLogo.png";
-import weatherAppLogo from "./assets/work_logo/sritLogo.png";
+import fitnessMicroservicesLogo from "./assets/work_logo/fitnessLogo.png";
+import weatherAppLogo from "./assets/work_logo/weatherLogo.png";
 import todoAppLogo from "./assets/work_logo/todoAppLogo.png";
 import customerSegLogo from "./assets/work_logo/customerSegLogo.png";
 import pollboxLogo from "./assets/work_logo/sritLogo.png";
-import votingAppLogo from "./assets/work_logo/sritLogo.png";
 import quizInterfaceLogo from "./assets/work_logo/sritLogo.png";
 import textUtilsLogo from "./assets/work_logo/textUtilsImg.png";
 import chatAppLogo from "./assets/work_logo/chatAppLogo.png";
@@ -48,7 +46,7 @@ import chatAppLogo from "./assets/work_logo/chatAppLogo.png";
 
 // Project Section Logo's
 
-export const myName = "Saddam Syed";
+export const myName = "Mahammad Rafi Syed";
 
 export const SkillsInfo = [
   {
@@ -58,8 +56,6 @@ export const SkillsInfo = [
       { name: "CSS", logo: cssLogo },
       { name: "JavaScript", logo: javascriptLogo },
       { name: "React JS", logo: reactjsLogo },
-      { name: "Angular", logo: angularLogo },
-      { name: "Redux", logo: reduxLogo },
       { name: "Tailwind CSS", logo: tailwindcssLogo },
       { name: "Material UI", logo: materialuiLogo },
       { name: "Bootstrap", logo: bootstrapLogo },
@@ -71,19 +67,17 @@ export const SkillsInfo = [
       { name: "Springboot", logo: springbootLogo },
       { name: "MySQL", logo: mysqlLogo },
       { name: "MongoDB", logo: mongodbLogo },
-      { name: "Firebase", logo: firebaseLogo },
       { name: "PostgreSQL", logo: postgreLogo },
     ],
   },
   {
     title: "Languages",
     skills: [
-      { name: "C", logo: cLogo },
       { name: "Java", logo: javaLogo },
       { name: "Python", logo: pythonLogo },
-      { name: "C-Sharp", logo: csharpLogo },
       { name: "JavaScript", logo: javascriptLogo },
-      { name: "TypeScript", logo: typescriptLogo },
+      { name: "C", logo: cLogo },
+      { name: "C-Sharp", logo: csharpLogo },
     ],
   },
   {
@@ -94,7 +88,6 @@ export const SkillsInfo = [
       { name: "VS Code", logo: vscodeLogo },
       { name: "Postman", logo: postmanLogo },
       { name: "Compass", logo: mcLogo },
-      { name: "Vercel", logo: vercelLogo },
       { name: "Netlify", logo: netlifyLogo },
     ],
   },
@@ -202,36 +195,36 @@ export const projects = [
     github: "https://github.com/thesaddamsyed/customer-segmentation",
     webapp: null,
   },
-  {
-    id: 5,
-    title: "Pollbox",
-    description:
-      "Java/Spring Boot polling app to create, participate in, and manage polls with real-time tallies and robust backend design.",
-    image: pollboxLogo,
-    tags: ["Java", "Spring Boot", "REST API", "Polling"],
-    github: "https://github.com/thesaddamsyed/pollbox",
-    webapp: null,
-  },
-  {
-    id: 6,
-    title: "Voting App",
-    description:
-      "Secure voting platform built with Spring Boot. Implements authentication and result management to ensure vote integrity.",
-    image: votingAppLogo,
-    tags: ["Java", "Spring Boot", "Security", "Authentication"],
-    github: "https://github.com/thesaddamsyed/voting-app",
-    webapp: null,
-  },
-  {
-    id: 7,
-    title: "Quiz Interface",
-    description:
-      "Interactive quiz built in JavaScript with multiple question types, scoring, and a user-friendly interface for learning and assessments.",
-    image: quizInterfaceLogo,
-    tags: ["JavaScript", "HTML", "CSS", "Frontend"],
-    github: "https://github.com/thesaddamsyed/quiz-interface",
-    webapp: null,
-  },
+  // {
+  //   id: 5,
+  //   title: "Pollbox",
+  //   description:
+  //     "Java/Spring Boot polling app to create, participate in, and manage polls with real-time tallies and robust backend design.",
+  //   image: pollboxLogo,
+  //   tags: ["Java", "Spring Boot", "REST API", "Polling"],
+  //   github: "https://github.com/thesaddamsyed/pollbox",
+  //   webapp: null,
+  // },
+  // {
+  //   id: 6,
+  //   title: "Voting App",
+  //   description:
+  //     "Secure voting platform built with Spring Boot. Implements authentication and result management to ensure vote integrity.",
+  //   image: votingAppLogo,
+  //   tags: ["Java", "Spring Boot", "Security", "Authentication"],
+  //   github: "https://github.com/thesaddamsyed/voting-app",
+  //   webapp: null,
+  // },
+  // {
+  //   id: 7,
+  //   title: "Quiz Interface",
+  //   description:
+  //     "Interactive quiz built in JavaScript with multiple question types, scoring, and a user-friendly interface for learning and assessments.",
+  //   image: quizInterfaceLogo,
+  //   tags: ["JavaScript", "HTML", "CSS", "Frontend"],
+  //   github: "https://github.com/thesaddamsyed/quiz-interface",
+  //   webapp: null,
+  // },
   {
     id: 8,
     title: "Text Utils",

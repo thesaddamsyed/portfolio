@@ -14,8 +14,8 @@ const About = () => {
             Hi, I am{" "}
           </h1>
           {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Saddam Syed
+          <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            Mahammad Rafi
           </h2>
           {/* typing animation with skills */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-300 mb-4 leading-tight">
